@@ -42,7 +42,7 @@ with open("Programming_Dictionary.txt", "r+") as file:
 
     action = int(input("Welcome to your personal Programming Dictionary. Please choose your next move: \n1. Create a new Entry \n2. Search for a term \n3. Alphabetize my dictionary\n"))
 
-    if action == 1:
+def CreateNew():
         newTerm = input("What is the term?")
         #Check if term exists as a key in the text/dictionary
         if newTerm in textDict.values(): #THIS IS NOT WORKING
@@ -53,8 +53,30 @@ with open("Programming_Dictionary.txt", "r+") as file:
             newDef = input("What is the definition? ")
             file.write("\n"+newDef)
 
+def SearchTermDef():
+    return True
 
-    '''    (1) if: create new:
+
+
+
+def Alphabetize():
+    terms = (textDict.keys()).sort
+    print(terms)
+    terms.sort()
+    for term in terms:
+        print("%s: %s" %(term, textDict[term]))
+        print ("hello")
+
+if action == 1:
+    CreateNew()
+elif action == 2:
+    SearchTermDef()
+elif action == 3:
+    Alphabetize()    
+
+
+
+    '''(1) if: create new:
             ask for term:
                 if term already exists:
                     print: "That term has already been defined" and show term w/ definition
