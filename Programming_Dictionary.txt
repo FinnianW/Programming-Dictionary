@@ -1,0 +1,12 @@
+cat
+feline creature
+dog
+canine creature
+bird
+avian creature
+lizard
+reptilian creature
+frog
+amphibious creature
+cat
+kittykitty
